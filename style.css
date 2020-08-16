@@ -1,0 +1,142 @@
+:root{
+  --Primary:#01579b;
+  --P-Light:#4f83cc;
+  --P-Dark:#002f6c;
+  --Secondary:#ef6091;
+  --S-Light:#ff93c1;
+  --S-Dark:#b92c64;
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(219, 218, 218);
+}
+.container{
+  padding: 30px 10px;
+  width:99%;
+  color: white;
+  position: relative;
+}
+
+.header{
+  background-color: var(--P-Dark);
+  text-align: center;
+  padding: 15px ;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.header .span{
+  color: var(--S-Dark);
+  position: relative;
+  transform: rotate(-8deg);
+  text-decoration: underline;
+  display: inline-block;
+}
+.header .ripple{
+  display: inline-block;
+  margin-left: 10px;
+  box-shadow: 0 2px 5px
+   #fff;
+   height: 20px;
+   width: 20px;
+  border-radius: 50%;
+}
+
+
+.alert-box{
+  padding: 8px 20px ;
+  text-align: center;
+  font-size: 18px;
+  position: relative;
+  animation: slide-in .5s ease;
+  display: none;
+}
+
+.show{
+  display: block;
+}
+.form{
+  display: flex;
+  width: 100%;
+  padding:10px 20px;
+  background-color: var(--Primary);
+  margin: 2px 0;
+}
+.form .formInput{
+  padding: 10px 20px;
+  width: 85%;
+  margin-right: 10px;
+  border: none;
+  font-size: 18px;
+  outline: 0;
+}
+
+.form .btn{
+  padding: 10px 20px;
+  width: 20%;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
+  background-color: var(--Secondary);
+  color: #fff;
+  outline: 0;
+  transition: transform .5s ease;
+}
+
+.form .btn:active{
+  transform: scale(.9);
+}
+
+.list-container .list-item{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: linear-gradient(145deg,#ff93c1,#4f83cc);
+  ;
+  color: white;
+  font-size: 20px;
+  margin-bottom:3px;
+  border-left: 5px solid var(--P-Dark);
+}
+
+.list-container .list-item .remove-item{
+  color: var(--Secondary);
+  transition: transform .5s ease-in-out;
+}
+.list-container .list-item .remove-item:hover{
+  transform: scale(1.2);
+}
+.clearBtn{
+  padding: 10px 20px;
+  background-color: var(--S-Dark);
+  border: none;
+  color: white;
+  font-size: 16px;
+}
+
+@media only screen and (min-width:600px){
+  .container{
+    width: 70%;
+  }
+}
+
+@keyframes slide-in {
+  from{
+    padding: 0px;
+    font-size: 0;
+  }
+  to{
+    padding: 10px 20px;
+    font-size: 18px;
+  }
+}
